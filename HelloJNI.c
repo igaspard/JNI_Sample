@@ -3,6 +3,7 @@
 
 JNIEXPORT void JNICALL Java_HelloJNI_printString(JNIEnv *env, jobject obj, jstring string)
 {
+    // Java string convert to C string.
     const char *str = (*env)->GetStringUTFChars(env, string, 0);
     printf(str);
 

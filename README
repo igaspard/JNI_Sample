@@ -1,12 +1,12 @@
 This one just the sample JNI example.
 
-1. Compile Java Code.
+1. Compile Java Code. And get the HelloJNI.class
     # javac HelloJNI.java
 
-2. Genernate the C header file.
+2. Genernate the C header file. Get HelloJNI.h
     # javah HelloJNI
 
-3. Build C/C++ Library. And Get the hellojni.dll
+3. Build C/C++ Library. And get the hellojni.dll
     # cl -I"D:\Java\jdk1.6.0_35\include" -I"D:\Java\jdk1.6.0_35\include\win32" -LD HelloJNI.c -Fehellojni.dll
 
 4. Run Java Application
