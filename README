@@ -7,7 +7,16 @@ This one just the sample JNI example.
     # javah HelloJNI
 
 3. Build C/C++ Library. And get the hellojni.dll
+    Windows
     # cl -I"D:\Java\jdk1.6.0_35\include" -I"D:\Java\jdk1.6.0_35\include\win32" -LD HelloJNI.c -Fehellojni.dll
 
+    Linux
+    # gcc -shared -fpic -I/home/gaspard/Downloads/jdk1.6.0_37/include/ 
+    -I/home/gaspard/Downloads/jdk1.6.0_37/include/linux/ -o libhellojni.so HelloJNI.c
+
 4. Run Java Application
+    Windows
     # java HelloJNI
+
+    Linux
+    # java -Djava.library.path=. HelloJNI
