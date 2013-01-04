@@ -11,8 +11,7 @@ This one just the sample JNI example.
     # cl -I"D:\Java\jdk1.6.0_35\include" -I"D:\Java\jdk1.6.0_35\include\win32" -LD HelloJNI.c -Fehellojni.dll
 
     Linux
-    # gcc -shared -fpic -I/home/gaspard/Downloads/jdk1.6.0_37/include/ 
-    -I/home/gaspard/Downloads/jdk1.6.0_37/include/linux/ -o libhellojni.so HelloJNI.c
+    # gcc -shared -fpic -I/home/gaspard/Downloads/jdk1.6.0_37/include/ -I/home/gaspard/Downloads/jdk1.6.0_37/include/linux/ -o libhellojni.so HelloJNI.c
 
 4. Run Java Application
     Windows
@@ -20,3 +19,8 @@ This one just the sample JNI example.
 
     Linux
     # java -Djava.library.path=. HelloJNI
+
+5. Register JNI Native function
+    # gcc -shared -fpic -I/home/gaspard/Downloads/jdk1.6.0_37/include/ -I/home/gaspard/Downloads/jdk1.6.0_37/include/linux/ -o libhellojni.so HelloJNIMap.cpp
+
+

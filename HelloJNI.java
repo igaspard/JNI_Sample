@@ -16,6 +16,6 @@ public class HelloJNI
         HelloJNI myjni = new HelloJNI();
 
         myjni.printHello();
-        myjni.printString("Hello world from Java printString()");
+        myjni.printString("Hello World from Java printString()");
     }
 }
